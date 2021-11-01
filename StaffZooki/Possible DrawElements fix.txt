@@ -1,0 +1,8 @@
+Draw Elements requires each indices, to link to the same position of tex coord, vertices and normal
+
+POSSIBLE FIX
+------------
+
+MeshLoader
+Move vertices from Vector into the final array
+When applying the Vertex Indices, do the setting of position in the texcoord and normals array as the vertex indices position. This means for example if F is 1/4/2, Vertex index would be 0, texcoord index would be 0 and normal index would be 0, BUT contain the data from 1/4/2
